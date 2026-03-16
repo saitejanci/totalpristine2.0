@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Total Pristine — Outdoor & Exterior Cleaning</title>
+
+  <meta name="description" content="Total Pristine transforms outdoor and exterior spaces: power washing, lawn mowing, hedge cutting, garden maintenance, window cleaning, and exterior painting." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background Canvas -->
+  <div class="grassLayer"></div>
+  <div class="windField" aria-hidden="true">
+  <div class="windBase"></div>
+  <div class="windWave windWave1"></div>
+  <div class="windWave windWave2"></div>
+  <div class="windShade"></div>
+</div>
+<canvas id="bg"></canvas>
+
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <img src="assets/logo.jpeg" alt="Total Pristine logo" class="brandLogo" />
+        <span class="brandText">Total Pristine</span>
+      </a>
+
+      <div class="navLinks">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="navCta" href="#contact">Get a Quote</a>
+      </div>
+
+      <button class="navMenu" id="navMenuBtn" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="drawer" id="drawer">
+      <a href="#services" class="drawerLink">Services</a>
+      <a href="#about" class="drawerLink">About</a>
+      <a href="#contact" class="drawerLink">Contact</a>
+      <a href="#contact" class="drawerCta">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="main">
+    <section class="hero">
+      <div class="heroInner">
+        <div class="pill">
+          <span class="dot"></span>
+          Dublin • Outdoor & Exterior Care
+        </div>
+
+        <h1 class="heroTitle">
+          Make every space look <span class="accent">pristine</span>.
+        </h1>
+
+        <p class="heroSubtitle">
+          We take pride in transforming outdoor and exterior spaces into clean, tidy, and welcoming environments —
+          from patios and driveways to gardens and windows.
+        </p>
+
+        <div class="heroActions">
+          <a class="btnPrimary" href="#contact">Book a Service</a>
+          <a class="btnSecondary" href="#services">Explore Services</a>
+        </div>
+
+        <div class="heroStats">
+          <div class="stat">
+            <div class="statNum">High-Quality</div>
+            <div class="statTxt">Reliable work, visible results</div>
+          </div>
+          <div class="stat">
+            <div class="statNum">Detail-First</div>
+            <div class="statTxt">We don’t rush the finish</div>
+          </div>
+          <div class="stat">
+            <div class="statNum">Year-Round</div>
+            <div class="statTxt">Maintenance & refresh services</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroCard">
+        <div class="cardGlow"></div>
+        <div class="cardBody">
+          <h3 class="cardTitle">Quick Quote</h3>
+          <p class="cardDesc">Tell us what you need — we’ll get back fast.</p>
+
+          <form class="miniForm" id="miniForm">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="tel" name="phone" placeholder="Phone number" required />
+            <select name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Power washing (patio/driveway)</option>
+              <option>Lawn mowing</option>
+              <option>Hedge cutting</option>
+              <option>Garden maintenance</option>
+              <option>Window cleaning</option>
+              <option>Exterior painting</option>
+            </select>
+            <button type="submit" class="btnPrimary w100">Request Quote</button>
+            <p class="miniHint">Module 3 will make this save + send automatically.</p>
+          </form>
+
+          <div class="callRow">
+            <div class="callBadge">Prefer calling?</div>
+            <a class="callLink" href="#" id="phoneLink">Call us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrollHint">
+        <span>Scroll</span>
+        <div class="scrollLine"></div>
+      </div>
+    </section>
+
+    <!-- Placeholder sections for Module 2+ -->
+    <section id="services" class="section">
+  <div class="sectionHead">
+    <h2 class="sectionTitle">Services</h2>
+    <p class="sectionSub">
+      Premium exterior care with visible results — clean, tidy, and welcoming outdoor spaces.
+    </p>
+  </div>
+  <div class="offerInline">
+  <span class="offerBadge">Offer</span>
+  <span>Choose any <b>3 services</b> → get <b>2 bin cleanings FREE</b>.</span>
+</div>
+
+
+  <div class="story">
+    <!-- 1 -->
+    <article class="storyItem reveal">
+      <div class="storyText">
+        <div class="kicker">Power Washing</div>
+        <h3>Patios & driveways that look new again.</h3>
+        <p>
+          Remove built-up grime, algae, and stains with a deep clean that restores the surface.
+          Ideal before guests, seasonal refresh, or property viewings.
+        </p>
+        <div class="chips">
+          <span>Patios</span><span>Driveways</span><span>Walls</span><span>Paths</span>
+        </div>
+      </div>
+      <div class="storyMedia">
+        <img class="parallax" alt="Power washing patio" src="assets/patio.jpg" />
+
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="storyItem reverse reveal">
+      <div class="storyText">
+        <div class="kicker">Lawn Mowing</div>
+        <h3>A crisp lawn that instantly upgrades curb appeal.</h3>
+        <p>
+          Consistent mowing with clean edges and a tidy finish. Great for regular upkeep or
+          getting the garden back in shape.
+        </p>
+        <div class="chips">
+          <span>Regular</span><span>One-off</span><span>Edging</span><span>Cleanup</span>
+        </div>
+      </div>
+      <div class="storyMedia">
+        <img class="parallax" alt="Lawn mowing in garden" src="assets/lawn.jpg" />
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="storyItem reveal">
+      <div class="storyText">
+        <div class="kicker">Hedge Cutting</div>
+        <h3>Neat lines. Clean shape. A garden that feels maintained.</h3>
+        <p>
+          Hedge trimming and shaping that makes your outdoor space look structured, balanced,
+          and professionally cared for.
+        </p>
+        <div class="chips">
+          <span>Trimming</span><span>Shaping</span><span>Green waste</span>
+        </div>
+      </div>
+      <div class="storyMedia">
+        <img class="parallax" alt="Hedge cutting service" src="assets/hedge.jpg" />
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="storyItem reverse reveal">
+      <div class="storyText">
+        <div class="kicker">Garden Maintenance</div>
+        <h3>Seasonal cleanups and regular care, done right.</h3>
+        <p>
+          We handle the small details that make a big difference — weeding, tidying, and
+          keeping everything looking sharp all year round.
+        </p>
+        <div class="chips">
+          <span>Weeding</span><span>Tidy-up</span><span>Maintenance</span>
+        </div>
+      </div>
+      <div class="storyMedia">
+          <img class="parallax" alt="Garden maintenance" src="assets/garden.png" />
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="storyItem reveal">
+      <div class="storyText">
+        <div class="kicker">Window Cleaning</div>
+        <h3>Brighter windows. Cleaner look. Better first impression.</h3>
+        <p>
+          Exterior window cleaning that helps your home feel fresh and well cared for.
+          Perfect for spring cleaning or before an event.
+        </p>
+        <div class="chips">
+          <span>Exterior</span><span>Frames</span><span>Finish</span>
+        </div>
+      </div>
+      <div class="storyMedia">
+        <img class="parallax" alt="Window cleaning" src="assets/windows.jpg" />
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="storyItem reverse reveal">
+      <div class="storyText">
+        <div class="kicker">Exterior Painting</div>
+        <h3>A fresh coat that lifts the whole property.</h3>
+        <p>
+          Give tired exterior areas a clean, renewed feel. We focus on preparation and a tidy
+          finish so the result looks premium.
+        </p>
+        <div class="chips">
+          <span>Walls</span><span>Fences</span><span>Trim</span>
+        </div>
+      </div>
+      <div class="storyMedia">
+        <img class="parallax" alt="Exterior painting" src="assets/paiting.jpg" />
+      </div>
+    </article>
+  </div>
+
+  <div class="sectionCta">
+    <a class="btnPrimary" href="#contact">Book a Service</a>
+    <a class="btnSecondary" href="#contact">Request a Quote</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="split reveal">
+    <div class="splitLeft">
+      <h2 class="sectionTitle">About Total Pristine</h2>
+      <p class="sectionSub">
+        We take pride in transforming outdoor and exterior spaces into clean, tidy, and welcoming environments.
+      </p>
+
+      <div class="aboutCard">
+        <p>
+          We offer reliable, high-quality services including power washing patios and driveways, lawn mowing,
+          hedge cutting, garden maintenance, window cleaning, and exterior painting.
+        </p>
+        <p>
+          Whether it’s refreshing a tired garden, restoring a dirty patio, or keeping your property looking sharp
+          all year round, we focus on attention to detail and delivering visible results.
+        </p>
+        <p class="aboutStrong">
+          From small residential jobs to full exterior clean-ups, our goal is simple: leave every space looking pristine.
+        </p>
+      </div>
+    </div>
+
+    <div class="splitRight">
+      <div class="aboutVisual">
+        <div class="aboutGlow"></div>
+        <img class="parallax" alt="Beautiful green garden background"
+          src="https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1" />
+      </div>
+      <div class="trustRow">
+        <div class="trust">
+          <div class="trustTop">Clean finish</div>
+          <div class="trustBot">Visible results</div>
+        </div>
+        <div class="trust">
+          <div class="trustTop">Detail-first</div>
+          <div class="trustBot">No rushed jobs</div>
+        </div>
+        <div class="trust">
+          <div class="trustTop">Respectful</div>
+          <div class="trustBot">Tidy worksite</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="sectionHead">
+    <h2 class="sectionTitle">Book a Service</h2>
+    <p class="sectionSub">
+      Tell us what you need. We’ll respond quickly. Please don’t include sensitive personal details.
+    </p>
+  </div>
+
+  <div class="grid2 reveal">
+    <div class="formCard">
+      <h3 class="cardTitle">Request a Quote / Booking</h3>
+      <p class="cardDesc">Minimum details only — GDPR-friendly.</p>
+
+      <form id="bookingForm" class="form">
+        <div class="row2">
+          <div>
+            <label>Name</label>
+            <input name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div>
+            <label>Phone</label>
+            <input name="phone" type="tel" placeholder="+353…" required />
+          </div>
+        </div>
+
+        <div>
+  <label>Select services (choose one or more)</label>
+
+  <div class="servicePick" id="servicePick">
+    <label class="pickItem">
+      <input type="checkbox" name="services" value="Power washing (patio/driveway)" />
+      <span>Power washing (patio/driveway)</span>
+    </label>
+    <label class="pickItem">
+      <input type="checkbox" name="services" value="Lawn mowing" />
+      <span>Lawn mowing</span>
+    </label>
+    <label class="pickItem">
+      <input type="checkbox" name="services" value="Hedge cutting" />
+      <span>Hedge cutting</span>
+    </label>
+    <label class="pickItem">
+      <input type="checkbox" name="services" value="Garden maintenance" />
+      <span>Garden maintenance</span>
+    </label>
+    <label class="pickItem">
+      <input type="checkbox" name="services" value="Window cleaning" />
+      <span>Window cleaning</span>
+    </label>
+    <label class="pickItem">
+      <input type="checkbox" name="services" value="Exterior painting" />
+      <span>Exterior painting</span>
+    </label>
+  </div>
+
+  <div class="offerBox" id="offerBox">
+    <div class="offerTop">
+      <span class="offerBadge">Offer</span>
+      <span class="offerText">Choose any <b>3 services</b> → get <b>2 bin cleanings FREE</b>.</span>
+    </div>
+    <div class="offerStatus" id="offerStatus">Select 3 services to unlock the free bin cleaning.</div>
+  </div>
+</div>
+
+
+        <div>
+          <label>Message (optional)</label>
+          <textarea name="message" rows="4" maxlength="500" placeholder="E.g., address area, size, preferred day/time…"></textarea>
+        </div>
+
+        <!-- simple anti-spam honeypot (leave hidden) -->
+        <input class="hp" type="text" name="website" autocomplete="off" tabindex="-1" />
+
+        <label class="checkRow">
+          <input type="checkbox" name="consent" required />
+          <span>
+            I consent to Total Pristine storing my details to respond to my enquiry.
+            <button type="button" class="linkBtn" id="openPrivacy">Privacy</button>
+          </span>
+        </label>
+
+        <button class="btnPrimary w100" type="submit" id="bookBtn">Submit Request</button>
+
+        <div class="formMsg" id="bookingMsg" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <div class="infoCard">
+      <h3 class="cardTitle">What happens next?</h3>
+      <ul class="steps">
+        <li>We review your request</li>
+        <li>We contact you for details (if needed)</li>
+        <li>We confirm price & schedule</li>
+      </ul>
+
+      <div class="miniNote">
+        Tip: For faster quotes, mention your area in Dublin and which service you need.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="sectionHead">
+    <h2 class="sectionTitle">Customer Comments</h2>
+    <p class="sectionSub">
+      Reviews are shown after approval to protect the site from spam. You can post with a name or stay anonymous.
+    </p>
+  </div>
+
+  <div class="grid2 reveal">
+    <div class="formCard">
+      <h3 class="cardTitle">Leave a Comment</h3>
+      <p class="cardDesc">Keep it respectful and relevant (max 500 characters).</p>
+
+      <form id="reviewForm" class="form">
+        <div class="row2">
+          <div>
+            <label>Name (optional)</label>
+            <input name="display_name" type="text" placeholder="e.g., John" maxlength="40" />
+          </div>
+          <div>
+            <label>Rating</label>
+            <select name="rating" required>
+              <option value="" disabled selected>Select</option>
+              <option value="5">★★★★★ (5)</option>
+              <option value="4">★★★★☆ (4)</option>
+              <option value="3">★★★☆☆ (3)</option>
+              <option value="2">★★☆☆☆ (2)</option>
+              <option value="1">★☆☆☆☆ (1)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label>Comment</label>
+          <textarea name="comment" rows="4" maxlength="500" required placeholder="Write your feedback..."></textarea>
+        </div>
+
+        <!-- honeypot -->
+        <input class="hp" type="text" name="website2" autocomplete="off" tabindex="-1" />
+
+        <button class="btnPrimary w100" type="submit" id="reviewBtn">Post Comment</button>
+        <div class="formMsg" id="reviewMsg" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <div class="listCard">
+      <h3 class="cardTitle">Approved Reviews</h3>
+      <div id="reviewsList" class="reviewsList"></div>
+<div id="reviewsLoading" class="reviewsLoading" aria-hidden="true">
+  <div class="sk"></div><div class="sk"></div><div class="sk"></div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Privacy Modal -->
+<div class="modal" id="privacyModal" aria-hidden="true">
+  <div class="modalBox">
+    <div class="modalHead">
+      <div class="modalTitle">Privacy Notice (GDPR)</div>
+      <button class="modalClose" id="closePrivacy" aria-label="Close">×</button>
+    </div>
+    <div class="modalBody">
+      <p><b>What we collect:</b> name, phone, selected service, and optional message (booking form). Reviews collect optional display name, rating, and comment.</p>
+      <p><b>Why:</b> to respond to your enquiry and provide services. Reviews are used to display customer feedback.</p>
+      <p><b>Visibility:</b> bookings are private. Reviews appear on the website only after approval.</p>
+      <p><b>Retention:</b> we keep booking enquiries only as long as needed for service/records. You can request deletion.</p>
+      <p><b>Your rights:</b> access, correction, deletion, and objection. Contact us to request changes.</p>
+      <p><b>Please note:</b> do not submit sensitive personal data.</p>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footerInner">
+      <div class="footBrand">Total Pristine</div>
+      <div class="footNote">© <span id="year"></span> Total Pristine. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
