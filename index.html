@@ -100,20 +100,28 @@
           <p class="cardDesc">Tell us what you need — we’ll get back fast.</p>
 
           <form class="miniForm" id="miniForm">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="tel" name="phone" placeholder="Phone number" required />
-            <select name="service" required>
-              <option value="" disabled selected>Select a service</option>
-              <option>Power washing (patio/driveway)</option>
-              <option>Lawn mowing</option>
-              <option>Hedge cutting</option>
-              <option>Garden maintenance</option>
-              <option>Window cleaning</option>
-              <option>Exterior painting</option>
-            </select>
-            <button type="submit" class="btnPrimary w100">Request Quote</button>
-            <p class="miniHint">Module 3 will make this save + send automatically.</p>
-          </form>
+  <input type="text" name="name" placeholder="Your name" required />
+  <input type="tel" name="phone" placeholder="Phone number" required />
+  <select name="service" required>
+    <option value="" disabled selected>Select a service</option>
+    <option>Power washing (patio/driveway)</option>
+    <option>Lawn mowing</option>
+    <option>Hedge cutting</option>
+    <option>Garden maintenance</option>
+    <option>Window cleaning</option>
+    <option>Exterior painting</option>
+  </select>
+
+  <input class="hp" type="text" name="websiteMini" autocomplete="off" tabindex="-1" />
+
+  <label class="checkRow">
+    <input type="checkbox" name="consent" required />
+    <span>I consent to being contacted about this quote request.</span>
+  </label>
+
+  <button type="submit" class="btnPrimary w100" id="miniQuoteBtn">Request Quote</button>
+  <div class="formMsg" id="miniQuoteMsg" aria-live="polite"></div>
+</form>
 
           <div class="callRow">
             <div class="callBadge">Prefer calling?</div>
@@ -394,17 +402,26 @@
     </div>
 
     <div class="infoCard">
-      <h3 class="cardTitle">What happens next?</h3>
-      <ul class="steps">
-        <li>We review your request</li>
-        <li>We contact you for details (if needed)</li>
-        <li>We confirm price & schedule</li>
-      </ul>
+  <h3 class="cardTitle">What happens next?</h3>
+  <ul class="steps">
+    <li>We review your request</li>
+    <li>We contact you for details (if needed)</li>
+    <li>We confirm price & schedule</li>
+  </ul>
 
-      <div class="miniNote">
-        Tip: For faster quotes, mention your area in Dublin and which service you need.
-      </div>
-    </div>
+  <div class="miniNote">
+    Tip: For faster quotes, mention your area in Dublin and which service you need.
+  </div>
+
+  <!-- Direct call box -->
+  <div class="callBox">
+    <div class="callBoxTitle">Prefer to speak directly?</div>
+    <a class="callBoxLink" href="tel:+353899526664">
+      Call +353 899 526 664
+    </a>
+  </div>
+
+</div>
   </div>
 </section>
 

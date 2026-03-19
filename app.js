@@ -17,11 +17,83 @@ const phoneLink = document.getElementById("phoneLink");
 phoneLink.textContent = "Add phone number";
 phoneLink.href = "tel:+353000000000";
 
-// Mini form (Module 3 will save to database)
-document.getElementById("miniForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Nice! Module 3 will make this send + save. For now, it’s a demo.");
-});
+// Quick Quote form - real submission
+const miniForm = document.getElementById("miniForm");
+const miniQuoteBtn = document.getElementById("miniQuoteBtn");
+const miniQuoteMsg = document.getElementById("miniQuoteMsg");
+
+if (miniForm) {
+  miniForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const hp = miniForm.elements["websiteMini"]?.value;
+    if (hp && hp.trim().length > 0) return;
+
+    const name = miniForm.elements["name"].value.trim();
+    const phone = miniForm.elements["phone"].value.trim();
+    const service = miniForm.elements["service"].value;
+    const consent = miniForm.elements["consent"].checked;
+
+    if (!name || !phone || !service) {
+      setMsg(miniQuoteMsg, "Please fill all required fields.", false);
+      return;
+    }
+
+    if (!consent) {
+      setMsg(miniQuoteMsg, "Please tick consent to continue.", false);
+      return;
+    }
+
+    if (!canPost("tp_miniquote_last_post", 30)) {
+      setMsg(miniQuoteMsg, "Please wait a moment before submitting again.", false);
+      return;
+    }
+
+    miniQuoteBtn.disabled = true;
+    setMsg(miniQuoteMsg, "Submitting...");
+
+    const services = [service];
+    const offerApplied = false;
+
+    const { error } = await supabaseClient
+      .from("bookings")
+      .insert([{
+        name,
+        phone,
+        service: services[0],
+        services,
+        offer_applied: offerApplied,
+        message: "Submitted from Quick Quote form",
+        consent: true
+      }]);
+
+    miniQuoteBtn.disabled = false;
+
+    if (error) {
+      console.error("Quick Quote insert error:", error);
+      setMsg(miniQuoteMsg, `Submit failed: ${error.message}`, false);
+      return;
+    }
+
+    miniForm.reset();
+    setMsg(miniQuoteMsg, "Thanks! Your quote request was submitted.");
+
+    const waText = `New Total Pristine quick quote:
+
+Name: ${name}
+Phone: ${phone}
+Services: ${services.join(", ")}
+Offer: No
+Message: Submitted from Quick Quote form
+
+Time: ${new Date().toLocaleString("en-IE")}`;
+
+    window.open(
+      `https://wa.me/${BUSINESS_WHATSAPP}?text=${encodeURIComponent(waText)}`,
+      "_blank"
+    );
+  });
+}
 
 // ====== Premium Interactive Background (Green Particles) ======
 const canvas = document.getElementById("bg");
