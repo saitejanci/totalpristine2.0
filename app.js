@@ -14,8 +14,8 @@ document.querySelectorAll(".drawer a").forEach(a => {
 
 // Put your real phone number here later (Module 3/launch)
 const phoneLink = document.getElementById("phoneLink");
-phoneLink.textContent = "Add phone number";
-phoneLink.href = "tel:+353000000000";
+phoneLink.textContent = "Call: +353 (085) 835 7097";
+phoneLink.href = "tel:+353858357097";
 
 // Quick Quote form - real submission
 const miniForm = document.getElementById("miniForm");
@@ -223,7 +223,7 @@ const SUPABASE_URL = "https://nmirkcuwqqahlfdbswds.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5taXJrY3V3cXFhaGxmZGJzd2RzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1NzA2MTIsImV4cCI6MjA4NTE0NjYxMn0.oxIMzH2aJfS3H5G_BtMUdwFez7Woqk7bCu_36efe590";
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-const BUSINESS_WHATSAPP = "917624963493"; // Ireland format, no +, no spaces
+const BUSINESS_WHATSAPP = "353858357097"; // Ireland format, no +, no spaces
 
 // --- Privacy modal ---
 const privacyModal = document.getElementById("privacyModal");
