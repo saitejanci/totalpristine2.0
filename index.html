@@ -19,7 +19,7 @@
   <meta property="og:title" content="Total Pristine | Outdoor & Exterior Cleaning Dublin" />
   <meta property="og:description" content="Professional power washing, lawn mowing, hedge cutting, garden maintenance and more across Dublin." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://totalpristine.com/assets/logo.jpeg" />
+  <meta property="og:image" content="https://www.totalpristine.com/assets/logo.jpeg" />
   <meta property="og:locale" content="en_IE" />
 
   <!-- (Optional but good) -->
@@ -34,6 +34,15 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="topOfferBar">
+  <div class="topOfferInner">
+    <span class="topOfferBadge">Special Offer</span>
+    <span class="topOfferText">
+      Book any <b>3 services</b> and get <b>2 bin cleanings FREE</b>.
+    </span>
+    <a href="#contact" class="topOfferLink">Claim Offer</a>
+  </div>
+</div>
   <!-- Background Canvas -->
   <div class="grassLayer"></div>
   <div class="windField" aria-hidden="true">
@@ -91,10 +100,29 @@
           We take pride in transforming outdoor and exterior spaces into clean, tidy, and welcoming environments —
           from patios and driveways to gardens and windows.
         </p>
+        <div class="heroOffer">
+          <div class="heroOfferGlow"></div>
+            <div class="heroOfferContent">
+              <div class="heroOfferBadge">Limited-time value</div>
+                
+                <h3>Book multiple services together to make the most of this offer while it’s available.</h3>
+                  <p>
+                    A great way to get more done in one visit and save more at the same time.
+                    Available when you book any 3 services together.
+                  </p>
+                <a href="#contact" class="btnPrimary heroOfferBtn">Unlock This Offer</a>
+              </div>
+        </div>
 
+        
         <div class="heroActions">
           <a class="btnPrimary" href="#contact">Book a Service</a>
           <a class="btnSecondary" href="#services">Explore Services</a>
+        </div>
+        <div class="heroTrust">
+          <span>Reliable service</span>
+          <span>Detail-focused finish</span>
+          <span>Serving homes across Dublin</span>
         </div>
 
         <div class="heroStats">
@@ -492,7 +520,9 @@
 
     <div class="listCard">
       <h3 class="cardTitle">Approved Reviews</h3>
-      <div id="reviewsList" class="reviewsList"></div>
+      <div class="reviewsWrapper">
+  <div id="reviewsList" class="reviewsList horizontal"></div>
+</div>
 <div id="reviewsLoading" class="reviewsLoading" aria-hidden="true">
   <div class="sk"></div><div class="sk"></div><div class="sk"></div>
 </div>
@@ -528,7 +558,10 @@
       <div class="footNote">© <span id="year"></span> Total Pristine. All rights reserved.</div>
     </div>
   </footer>
-
+  <div class="floatingActions">
+    <a class="floatBtn floatCall" href="tel:+353858357097">Call</a>
+    <a class="floatBtn floatWhatsApp" href="https://wa.me/353858357097" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="app.js"></script>
 
